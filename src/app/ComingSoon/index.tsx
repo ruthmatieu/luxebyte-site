@@ -53,7 +53,7 @@ const ComingSoon = () => {
         style={{ backgroundImage: `url(${background.src})` }}
     >
         <Image src={logo} alt="logo" className="w-32 rounded"/>
-      <h1 className="text-5xl font-extrabold mt-6 mb-4 text-[#0b1832]">
+      <h1 className="text-3xl xs:text-4xl md:text-5xl font-extrabold mt-6 mb-4 text-[#0b1832]">
         Coming Soon September 2025
       </h1>
       <p className="text-xl md:text-2xl mb-2 text-[#0b1832]">
@@ -84,7 +84,7 @@ const ComingSoon = () => {
 
           <button
             type="submit"
-            className="w-full bg-[#5acaae] hover:bg-[#2085b8] text-white py-2 rounded-lg transition-colors cursor-pointer"
+            className="w-full bg-[#0b1832] hover:bg-[#5acaae] text-white font-semibold hover:text-[#0b1832] py-2 rounded-lg transition-colors cursor-pointer"
           >
             Notify Me
           </button>
