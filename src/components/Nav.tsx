@@ -9,7 +9,7 @@ import logo from "../../assets/logo.png";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "#services" },
+  { name: "Services", href: "/services" },
   { name: "Portfolio", href: "#portfolio" },
   { name: "Contact", href: "#contact" },
 ];
@@ -18,8 +18,9 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="w-full px-6 py-4 bg-white shadow-md fixed top-0 z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    // <header className="w-full px-4 sm:px-6 md:px-10 lg:px-20 py-4 bg-[#f4f7f9]">
+    <header className="m-0 sticky top-0 z-50 backdrop-blur-md bg-white/20 px-4 sm:px-6 md:px-10 lg:px-20 py-4 transition-all">
+      <div className="flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <Image src={logo} alt="Logo" className="w-20 md:w-26" />
@@ -27,7 +28,7 @@ export default function Nav() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6">
-          {navLinks.map((link) => (
+          {navLinks.map(link => (
             <Link
               key={link.name}
               href={link.href}
@@ -54,7 +55,7 @@ export default function Nav() {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="md:hidden mt-2 bg-white shadow-lg rounded-lg px-4 py-2 space-y-2">
-          {navLinks.map((link) => (
+          {navLinks.map(link => (
             <Link
               key={link.name}
               href={link.href}

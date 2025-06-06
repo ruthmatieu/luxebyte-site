@@ -1,12 +1,17 @@
-// src/components/ImageCard.tsx
-import Image, { StaticImageData }  from "next/image";
+import Image, { StaticImageData } from "next/image";
+import clsx from "clsx";
 
 interface ImageCardProps {
+  className: string;
   imageSrc: string | StaticImageData;
   alt?: string;
 }
 
-export default function ImageCard({ imageSrc, alt }: ImageCardProps) {
+export default function ImageCard({
+  imageSrc,
+  alt,
+  className,
+}: ImageCardProps) {
   return (
     <div
       className="relative max-w-xs overflow-hidden bg-white rounded-2xl shadow-xl transition-transform duration-500 hover:scale-105 aspect-[250/350]"
@@ -22,7 +27,7 @@ export default function ImageCard({ imageSrc, alt }: ImageCardProps) {
         src={imageSrc}
         alt={alt || "Card image"}
         fill
-        className="object-cover rounded-2xl"
+        className={clsx("object-cover rounded-2x", className)}
       />
     </div>
   );

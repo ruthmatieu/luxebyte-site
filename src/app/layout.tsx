@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/Nav";
+import Footer from "./Homepage/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,7 +53,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
     creator: "@luxebytesolutions", // Optional: Add your Twitter handle
   },
-    icons: {
+  icons: {
     icon: "/favicon.ico",
   },
 };
@@ -66,7 +68,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* <Nav /> */}
         {children}
+        {/* <Footer /> */}
       </body>
     </html>
   );
