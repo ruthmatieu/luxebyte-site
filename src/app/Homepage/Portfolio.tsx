@@ -74,3 +74,91 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
+/*
+
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import ComingSoon from "../../../assets/coming-soon-bg.png";
+import heroImage1 from "../../../assets/hero-image-1.png";
+import heroImage2 from "../../../assets/hero-image-2.png";
+import heroImage3 from "../../../assets/hero-image-3.png";
+
+const portfolioItems = [
+  {
+    src: heroImage3,
+    title: "Project Title",
+    desc: "This is where the project description goes. Give an overview or go in depth – what it’s all about, what inspired you, how you created it, or anything else you’d like visitors to know.",
+  },
+  {
+    src: heroImage1,
+    title: "Project Title",
+    desc: "This is where the project description goes. Give an overview or go in depth – what it’s all about, what inspired you, how you created it, or anything else you’d like visitors to know.",
+  },
+  {
+    src: heroImage2,
+    title: "Project Title",
+    desc: "This is where the project description goes. Give an overview or go in depth – what it’s all about, what inspired you, how you created it, or anything else you’d like visitors to know.",
+  },
+  {
+    src: ComingSoon,
+    title: "Project Title",
+    desc: "This is where the project description goes. Give an overview or go in depth – what it’s all about, what inspired you, how you created it, or anything else you’d like visitors to know.",
+  },
+  {
+    src: ComingSoon,
+    title: "Project Title",
+    desc: "This is where the project description goes. Give an overview or go in depth – what it’s all about, what inspired you, how you created it, or anything else you’d like visitors to know.",
+  },
+  {
+    src: ComingSoon,
+    title: "Project Title",
+    desc: "This is where the project description goes. Give an overview or go in depth – what it’s all about, what inspired you, how you created it, or anything else you’d like visitors to know.",
+  },
+];
+
+const Portfolio = () => {
+  return (
+    <section className="bg-[#f4f7f9] px-4 sm:px-6 md:px-10 lg:px-20 py-16 md:py-20 lg:py-32 text-[#0b1832]">
+      <div className="text-center mb-12 space-y-4">
+        <p className="text-3xl sm:text-5xl font-medium">
+          Clean, modern, and built to perform.
+        </p>
+        <p className="text-lg sm:text-xl font-medium text-[#0b1832]/80">
+          A glimpse into the websites we&apos;ve built for small businesses like
+          yours.
+        </p>
+      </div>
+
+      <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
+        {portfolioItems.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="break-inside-avoid mb-6 bg-white rounded-xl overflow-hidden shadow-md"
+          >
+            <Image
+              src={item.src}
+              alt={item.title}
+              className="w-full object-cover"
+              placeholder="blur"
+            />
+            <div className="p-4">
+              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+              <p className="text-sm text-gray-700">{item.desc}</p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Portfolio;
+*/

@@ -10,8 +10,8 @@ import logo from "../../assets/logo.png";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "Contact", href: "#contact" },
+  { name: "Case Studies", href: "/case-studies" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Nav() {
@@ -19,7 +19,7 @@ export default function Nav() {
 
   return (
     // <header className="w-full px-4 sm:px-6 md:px-10 lg:px-20 py-4 bg-[#f4f7f9]">
-    <header className="m-0 sticky top-0 z-50 backdrop-blur-md bg-white/20 px-4 sm:px-6 md:px-10 lg:px-20 py-4 transition-all">
+    <header className="m-0 sticky top-0 z-50 backdrop-blur-md bg-white px-4 sm:px-6 md:px-10 lg:px-20 py-4 transition-all">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
